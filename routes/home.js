@@ -119,7 +119,7 @@ router.get("/user/logout", (req, res) => {
 //////////////////////////
 
 
-// Trefle Index API Call
+//! Dogs API call
 // ---- page number is dynamic ------\\
 router.get("/trefle/:pageNumber", async (req, res) => {
   // fetch the data with axios

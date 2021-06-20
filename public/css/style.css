@@ -1,7 +1,7 @@
 /* ----------- ALL PAGES STYLING --------------- */
 
 * {
-  font-family: 'Anonymous Pro', monospace;
+  font-family: "Anonymous Pro", monospace;
 }
 
 body {
@@ -15,10 +15,14 @@ body {
 /* TODO: Mobile / responsible styling */
 
 #bg {
-  background-image: url("https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60");
+  background-image: url("../images/dogs_bg1.jpeg");
   width: 100%;
   height: 100vh;
   background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #464646;
 }
 
 .landing-text {
@@ -53,7 +57,7 @@ body {
 #enter-site {
   margin: 0;
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #111111;
@@ -130,8 +134,6 @@ body {
 
 /* ----------- HOME PAGE STYLING --------------- */
 
-
-
 .header-links-container {
   display: flex;
   flex-direction: row;
@@ -162,7 +164,7 @@ body {
   justify-content: center; */
 }
 
-  /* ----------- CAROUSEL STYLING --------------- */
+/* ----------- CAROUSEL STYLING --------------- */
 
 .slider {
   width: 700px;
@@ -213,7 +215,6 @@ body {
 }
 
 .main-text {
-
   /* display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,7 +229,6 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
-
 
 .main-card .main-image {
   max-height: 70%;
@@ -280,8 +280,8 @@ body {
 }
 
 .container.is-fluid.profile-plants {
-    height: 80vh;
-    /* border: 1px solid red; */
+  height: 80vh;
+  /* border: 1px solid red; */
 }
 
 .plant-name {
@@ -297,9 +297,6 @@ body {
 .signup-container {
   height: 50vh;
 }
-
-
-
 
 /* ------------ FOOTER PAGE STYLING ----------- */
 
@@ -325,12 +322,19 @@ body {
   #carousel-image {
     max-width: 200px;
   }
-  /* .home-container {
-    height: none;
-  } */
+  #landing-title,
+  #landing-subtitle {
+    font-size: 45px;
+  }
+  #enter-site {
+  margin: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+}
+
 
   .home-tiles {
     margin: 10px;
   }
-
 }
