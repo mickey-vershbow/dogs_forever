@@ -1,0 +1,336 @@
+/* ----------- ALL PAGES STYLING --------------- */
+
+* {
+  font-family: 'Anonymous Pro', monospace;
+}
+
+body {
+  background-color: #7fdbff;
+}
+.navbar {
+  background-color: #7fdbff;
+}
+
+/* ----------- LANDING PAGE STYLING --------------- */
+/* TODO: Mobile / responsible styling */
+
+#bg {
+  background-image: url("https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.landing-text {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 20%;
+  margin: 1px auto;
+  display: block;
+  text-align: center;
+  color: #ffffff;
+}
+body {
+  position: relative;
+}
+.landing-text {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#landing-title,
+#landing-subtitle {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px #111111;
+  font-size: 80px;
+}
+
+#enter-site {
+  margin: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #111111;
+  background-color: #dddddd;
+}
+
+#enter-site:hover {
+  box-shadow: 0 12px 16px 0 #111111, 0 17px 50px 0 #111111;
+}
+
+/* ----------- HEADER and NAVBAR STYLING ----------- */
+.is-header {
+  background-color: #ffdc00;
+}
+
+.button.is-signup {
+  background-color: #01ff70;
+}
+
+.tile.is-child.notification.is-tile {
+  background-color: #ffdc00;
+  color: #111111;
+}
+
+.tile.is-child.notification.has-background-success-light {
+  color: #111111;
+}
+
+.box.signup-form {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+}
+
+#signup-form {
+  width: 80%;
+}
+
+.signup-container {
+  margin: 80px;
+}
+
+#signup-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.box.login-form {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+}
+
+#login-form {
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  margin: 80px;
+}
+
+#login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+/* ----------- HOME PAGE STYLING --------------- */
+
+
+
+.header-links-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-links-container div {
+  margin: 0 9%;
+}
+
+.header-link {
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: x-large;
+  text-shadow: 1px 1px #ffdc00;
+}
+
+/* .home-container {
+  height: 100vh;
+} */
+
+.home-tiles {
+  margin: 10px;
+  /* height: 100vh;
+  display: flex;
+  justify-content: center; */
+}
+
+  /* ----------- CAROUSEL STYLING --------------- */
+
+.slider {
+  width: 700px;
+  height: 320px;
+  margin: auto;
+}
+
+.slider img {
+  width: 690px;
+  height: 310px;
+}
+
+.slider:nth-child(0) {
+  display: visible;
+}
+
+.controls {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+
+.controls button {
+  font-size: large;
+  margin: 2px;
+}
+
+.tile.is-child.notification.has-background-success-light.carousel {
+  display: flex;
+}
+
+#image-carousel-mv {
+  padding: 10px;
+  max-width: 380px;
+}
+
+/* ------------ GUEST INDEX PAGE STYLING ----------- */
+
+.button.about-button {
+  justify-content: center;
+  font-size: small;
+}
+
+.main-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-text {
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: wrap; */
+  margin-left: 6px;
+}
+
+.main-card .main-media {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.main-card .main-image {
+  max-height: 70%;
+  overflow: hidden;
+  min-height: 150px;
+}
+
+.main-card.main-spacing {
+  min-height: 10%;
+}
+
+.main-card .about-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+}
+
+.main-card .about-button button {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* ------------ USER PROFILE STYLING ----------- */
+
+.button.new-plant-button {
+  margin-top: 20px;
+  transition-duration: 0.4s;
+}
+
+.button.new-plant-button:hover {
+  background-color: #01ff70;
+  font-style: bolder;
+}
+
+.button.logout-button {
+  margin-top: 20px;
+  transition-duration: 0.4s;
+}
+
+.button.logout-button:hover {
+  background-color: #85144b;
+  color: #ffffff;
+  font-style: bolder;
+}
+
+.profile-container {
+  height: 80vh;
+}
+
+.container.is-fluid.profile-plants {
+    height: 80vh;
+    /* border: 1px solid red; */
+}
+
+.plant-name {
+  font-size: xx-large;
+  color: #111111;
+}
+
+/* ------ USER AUTH STYLING --------  */
+.login-container {
+  height: 50vh;
+}
+
+.signup-container {
+  height: 50vh;
+}
+
+
+
+
+/* ------------ FOOTER PAGE STYLING ----------- */
+
+.footer {
+  background-color: #001f3f;
+  /* padding: 1rem 1.5rem 1rem; */
+}
+
+.footer-text {
+  color: #ffffff;
+}
+
+.footer-text-strong {
+  color: #ffffff;
+  text-shadow: 2px 2px 8px #f012be;
+}
+
+/* --------- MEDIA QUERIES --------------*/
+@media only screen and (max-width: 700px) {
+  #image-carousel-mv {
+    max-width: none;
+  }
+  #carousel-image {
+    max-width: 200px;
+  }
+  /* .home-container {
+    height: none;
+  } */
+
+  .home-tiles {
+    margin: 10px;
+  }
+
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- THE HEAD TAG PARTIAL -->
+    <%- include("../partials/head") %>
+
+    <body>
+        <!-- THE HEADER TAG PARTIAL -->
+        <%- include("../partials/header") %>
+
+ <section class="hero is-header is-small has-text-centered">
+      <div class="hero-body">
+        <p class="title">Plants Index</p>
+        <p class="subtitle via-trefle">via <a href="https://trefle.io" target="_blank">Trefle Global Plants API</a></p>
+        <!-- TODO: Display Page Number -->
+        <p class="subtitle">Page <%= currentPage %></p>
+      </div>
+    </section>
+
+
+<main class="index-main">
+    <div class="container trefle-plants" id="plants-index" style="display: flex; flex-wrap: wrap; justify-content: space-around">
+      <% for (plant of plantsBySchema) { %>
+        <div class="card main-card" style="margin: 30px; max-width: 200px;">
+                <div class="media-content main-media">
+                  <div class="main-text">
+                  <p class="title is-4"><%=plant.name%></p>
+                  <p class="subtitle is-6"><%=plant.origin%></p>
+                  </div>
+                  <div class="main-image">
+                      <a href="/trefle/index/<%=plant._id;%>"><img src="<%=plant.url%>"></a>
+                  </div>
+                  <div class="main-spacing">
+
+                  </div>
+                </div>
+
+
+
+                <div class="content about-button">
+                    <a href="<%=plant.link%>"  target="_blank"><button class="button about-button">ABOUT</button></a>
+                  </div>
+                </div>
+      <% } %>
+  </div>
+
+  <!-- BUTTONS -->
+  <a href="/trefle/<%=back%>"><button id="nextPage">↚ PREVIOUS PAGE </button></a>
+  <a href="/trefle/<%=next%>"><button id="nextPage">NEXT PAGE ↛</button></a>
+
+
+
+        </main>
+        <!-- THE FOOTER TAG PARTIAL -->
+        <%- include("../partials/footer") %>
+    </body>
+</html>

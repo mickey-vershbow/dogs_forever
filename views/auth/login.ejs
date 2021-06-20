@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- THE HEAD TAG PARTIAL -->
+<%- include("../partials/head") %>
+
+<body>
+
+    <!-- THE HEADER TAG PARTIAL -->
+    <%- include("../partials/header") %>
+
+    <section class="hero is-header has-text-centered">
+      <div class="hero-body">
+        <p class="title">User Login</p>
+      </div>
+    </section>
+
+<main class="login-container">
+        <div class="box login-form">
+        <form action="/auth/login" method="post">
+        <div class="field">
+            <label class="label">Username</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="username" name="username" />
+            </div>
+        </div>
+
+            <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="password" name="password">
+            </div>
+        </div>
+        
+            <div class="field">
+                <p class="control" type="submit" value="log in" id="login-button">
+                    <button class="button is-success">
+                    Login
+                    </button>
+                </p>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+</main>
+
+    <!-- THE FOOTER TAG PARTIAL -->
+    <%- include("../partials/footer") %>
+</body>
+</html>
