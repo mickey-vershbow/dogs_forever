@@ -127,7 +127,7 @@ router.get("/trefle/:pageNumber", async (req, res) => {
   let pageNumber = req.params.pageNumber;
   const API_KEY = process.env.API_KEY
   const response = await axios(
-    `https://api.thedogapi.com/v1/breeds?token=${API_KEY}`
+    `https://api.thedogapi.com/v1/breeds?token=${API_KEY}&limit=30&page=${pageNumber}&order=asc`
   );
   //   `https://api.thedogapi.com/v1/breeds?token=554fa029-68ae-4dc9-8334-11cf62a47d04&page=${pageNumber}`
   //   https://api.thedogapi.com/v1/images/search?token=554fa029-68ae-4dc9-8334-11cf62a47d04&limit=30
