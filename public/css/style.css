@@ -164,6 +164,13 @@ body {
   justify-content: center; */
 }
 
+.welcome-list {
+  list-style: square;
+}
+
+.welcome-tile {
+  font-size: 1.25rem;
+}
 /* ----------- CAROUSEL STYLING --------------- */
 
 .slider {
