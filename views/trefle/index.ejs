@@ -10,8 +10,9 @@
 
  <section class="hero is-header is-small has-text-centered">
       <div class="hero-body">
-        <p class="title">Plants Index</p>
-        <p class="subtitle via-trefle">via <a href="https://trefle.io" target="_blank">Trefle Global Plants API</a></p>
+        <p class="title">Dogs Index</p>
+        <p class="subtitle via-trefle">via <a href="https://docs.thedogapi.com/" target="_blank">
+          The Dogs API</a></p>
         <!-- TODO: Display Page Number -->
         <p class="subtitle">Page <%= currentPage %></p>
       </div>
@@ -20,15 +21,15 @@
 
 <main class="index-main">
     <div class="container trefle-plants" id="plants-index" style="display: flex; flex-wrap: wrap; justify-content: space-around">
-      <% for (plant of plantsBySchema) { %>
+      <% for (dog of dogs) { %>
         <div class="card main-card" style="margin: 30px; max-width: 200px;">
                 <div class="media-content main-media">
                   <div class="main-text">
-                  <p class="title is-4"><%=plant.name%></p>
-                  <p class="subtitle is-6"><%=plant.origin%></p>
+                  <p class="title is-4"><%=dog.name%></p>
+                  <p class="subtitle is-6"><%=dog.temperament%></p>
                   </div>
                   <div class="main-image">
-                      <a href="/trefle/index/<%=plant._id;%>"><img src="<%=plant.url%>"></a>
+                      <a href="/trefle/index/<%=dog._id;%>"><img src="<%=dog.wikipedia_url%>"></a>
                   </div>
                   <div class="main-spacing">
 
@@ -37,9 +38,9 @@
 
 
 
-                <div class="content about-button">
-                    <a href="<%=plant.link%>"  target="_blank"><button class="button about-button">ABOUT</button></a>
-                  </div>
+                <!-- <div class="content about-button">
+                    <a href="<%=dog.link%>"  target="_blank"><button class="button about-button">ABOUT</button></a>
+                  </div> -->
                 </div>
       <% } %>
   </div>

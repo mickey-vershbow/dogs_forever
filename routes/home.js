@@ -126,24 +126,27 @@ router.get("/trefle/:pageNumber", async (req, res) => {
   console.log(req.params.pageNumber);
   let pageNumber = req.params.pageNumber;
   const response = await axios(
-    `https://trefle.io/api/v1/plants?token=s8drF5lfAM1u6ZQEjpl7y1Nw9hwJN3ms5F717muNPoE&page=${pageNumber}`
+    `https://api.thedogapi.com/v1/breeds?token=554fa029-68ae-4dc9-8334-11cf62a47d04`
   );
+  //   `https://api.thedogapi.com/v1/breeds?token=554fa029-68ae-4dc9-8334-11cf62a47d04&page=${pageNumber}`
   // grab the plant data from the response object
-  const plants = response.data.data;
-  const plantsBySchema = plants.map(item => {
-      const container = {};
+  const dogs = response.data;
+  console.log(response.data);
+  //   const dogsBySchema = dogs.map(item => {
+  //       const container = {};
 
-      container.name = item.common_name;
-      container.url = item.image_url;
-      container.description = item.scientific_name;
-      container.origin = item.family_common_name;
-      container.petsafe = item.family;
+  //       container.name = item.common_name;
+  //       container.url = item.image_url;
+  //       container.description = item.scientific_name;
+  //       container.origin = item.family_common_name;
+  //       container.petsafe = item.family;
 
-      return container;
-  })
+  //       return container;
+  //   })
 
   res.render("trefle/index", {
-    plantsBySchema,
+    // dogsBySchema,
+    dogs,
     next: parseInt(req.params.pageNumber) + 1,
     back: parseInt(req.params.pageNumber) - 1,
     currentPage: pageNumber,
