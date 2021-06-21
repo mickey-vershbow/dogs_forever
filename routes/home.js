@@ -126,12 +126,12 @@ router.get("/trefle/:pageNumber", async (req, res) => {
   console.log(req.params.pageNumber);
   let pageNumber = req.params.pageNumber;
   const response = await axios(
-    `https://api.thedogapi.com/v1/breeds?token=554fa029-68ae-4dc9-8334-11cf62a47d04`
+    `https://api.thedogapi.com/v1/breeds?token=554fa029-68ae-4dc9-8334-11cf62a47d04&p`
   );
   //   `https://api.thedogapi.com/v1/breeds?token=554fa029-68ae-4dc9-8334-11cf62a47d04&page=${pageNumber}`
+  //   https://api.thedogapi.com/v1/images/search?token=554fa029-68ae-4dc9-8334-11cf62a47d04&limit=30
   // grab the plant data from the response object
   const dogs = response.data;
-  console.log(response.data);
   //   const dogsBySchema = dogs.map(item => {
   //       const container = {};
 

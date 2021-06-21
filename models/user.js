@@ -11,7 +11,13 @@ const Dog = new Schema({
     weight: {},
     country_code: String,
     height: {},
-    hypoallergenic: Number
+    hypoallergenic: Number,
+    image: {
+        id: String,
+        width: String,
+        height: String,
+        url: String
+    }
 })
 // The User Schema
 const UserSchema = new Schema({
