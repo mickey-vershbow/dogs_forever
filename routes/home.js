@@ -51,7 +51,9 @@ router.get("/", (req, res) => {
 ////////////////////////////////
 router.get("/home", (req, res) => {
       res.render("home", { isLoggedIn: req.session.userId });
+
 })
+
 
 ////////////////////////
 //! USER AUTH ROUTES
