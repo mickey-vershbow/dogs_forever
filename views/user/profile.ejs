@@ -10,24 +10,24 @@
 
     <section class="hero is-header has-text-centered">
       <div class="hero-body">
-        <p class="title">Your Personal Plant Collection </p>
+        <p class="title">Your Favorites</p>
         <p class="subtitle">
           <!-- Add new plant button -->
-          <a class="button new-plant-button" href="/user/new">Add A New Plant</a>
+          <a class="button new-plant-button" href="/user/new">Add A New Dog Breed</a>
         </p>
       </div>
     </section>
 
     <main class="profile-container">
       <div class="container is-fluid profile-plants">
-        <% for(let i = 0; i < plants.length; i++) { %>
+        <% for(let i = 0; i < dogs.length; i++) { %>
           <br>
 
       <figure class="image is-128x128 profile-plants-links">
         <!-- SHOW PAGE -->
-        <a href="/user/profile/<%=plants[i]._id;%>">
+        <a href="/user/profile/<%=dogs[i]._id;%>">
           <h1 class="plant-name has-text-centered"><%= plants[i].name %></h1>
-          <img src="<%= plants[i].url %>" />
+          <img src="<%= dogs[i].url %>" />
       </a>
        <!-- DELETE FORM -->
               <form action="/user/profile/<%=plants[i]._id; %>?_method=DELETE" method="POST" class="delete-button">

@@ -129,7 +129,7 @@ router.get("/trefle/:pageNumber", async (req, res) => {
   let pageNumber = req.params.pageNumber;
   const API_KEY = process.env.API_KEY
   const response = await axios(
-    `https://api.thedogapi.com/v1/breeds?token=${API_KEY}&limit=30&page=${pageNumber}&order=asc`
+    `https://api.thedogapi.com/v1/breeds?token=${API_KEY}&limit=10&page=${pageNumber}&order=asc`
   );
   //   `https://api.thedogapi.com/v1/breeds?token=554fa029-68ae-4dc9-8334-11cf62a47d04&page=${pageNumber}`
   //   https://api.thedogapi.com/v1/images/search?token=554fa029-68ae-4dc9-8334-11cf62a47d04&limit=30
@@ -164,7 +164,7 @@ router.get("/user/profile", isAuthorized, async (req, res) => {
     const user = await User.findOne({ username: req.user.username});
         // if user is logged in, render a template passing it the list of plants
         res.render("user/profile", {
-          plants: user.plants,
+          dogs: user.dogs,
           isLoggedIn: req.session.userId,
         });
 });
