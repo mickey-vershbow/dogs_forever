@@ -1,58 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- THE HEAD TAG PARTIAL -->
+  <%- include("../partials/head") %>
 
-    <!-- THE HEAD TAG PARTIAL -->
-    <%- include("../partials/head") %>
+  <body>
+    <!-- THE HEADER TAG PARTIAL -->
+    <%- include("../partials/header") %>
 
-    <body>
-        <!-- THE HEADER TAG PARTIAL -->
-        <%- include("../partials/header") %>
-
- <section class="hero is-header is-small has-text-centered">
+    <section class="hero is-header is-small has-text-centered">
       <div class="hero-body">
         <p class="title">Dogs Index</p>
-        <p class="subtitle via-trefle">via <a href="https://docs.thedogapi.com/" target="_blank">
-          The Dogs API</a></p>
+        <p class="subtitle via-trefle">
+          via
+          <a href="https://docs.thedogapi.com/" target="_blank">
+            The Dogs API</a
+          >
+        </p>
         <!-- TODO: Display Page Number -->
         <p class="subtitle">Page <%= currentPage %></p>
       </div>
     </section>
 
+    <main class="index-main">
+      <div
+        class="container trefle-plants"
+        id="plants-index"
+        style="display: flex; flex-wrap: wrap; justify-content: space-around"
+      >
+        <% for (dog of dogs) { %>
+        <div class="card main-card" style="margin: 30px; max-width: 200px">
+          <div class="media-content main-media">
+            <div class="main-text">
+              <p class="title is-4"><%=dog.name%></p>
+              <p class="subtitle is-6"><%=dog.temperament%></p>
+              <p><strong>Origin: </strong><%=dog.origin%></p>
+              <p><strong>Height: </strong><%=dog.height.metric%></p>
+              <p><strong>Weight: </strong><%=dog.weight.metric%></p>
+              <p><strong>Bred For: </strong><%=dog.bred_for%></p>
+              <p><strong>Breed Group: </strong><%=dog.breed_group%></p>
+              <p><strong>Life Span: </strong><%=dog.life_span%></p>
+            </div>
+            <div class="main-image">
+              <a href="<%=dog.image.url%>"><img src="<%=dog.image.url%>" /></a>
+            </div>
+            <div class="main-spacing"></div>
+          </div>
 
-<main class="index-main">
-    <div class="container trefle-plants" id="plants-index" style="display: flex; flex-wrap: wrap; justify-content: space-around">
-      <% for (dog of dogs) { %>
-        <div class="card main-card" style="margin: 30px; max-width: 200px;">
-                <div class="media-content main-media">
-                  <div class="main-text">
-                  <p class="title is-4"><%=dog.name%></p>
-                  <p class="subtitle is-6"><%=dog.temperament%></p>
-                  </div>
-                  <div class="main-image">
-                      <a href="<%=dog.image.url%>"><img src="<%=dog.image.url%>"></a>
-                  </div>
-                  <div class="main-spacing">
-
-                  </div>
-                </div>
-
-
-
-                <!-- <div class="content about-button">
+          <!-- <div class="content about-button">
                     <a href="<%=dog.link%>"  target="_blank"><button class="button about-button">ABOUT</button></a>
                   </div> -->
-                </div>
-      <% } %>
-  </div>
+        </div>
+        <% } %>
+      </div>
 
-  <!-- BUTTONS -->
-  <a href="/trefle/<%=back%>"><button id="nextPage">↚ PREVIOUS PAGE </button></a>
-  <a href="/trefle/<%=next%>"><button id="nextPage">NEXT PAGE ↛</button></a>
-
-
-
-        </main>
-        <!-- THE FOOTER TAG PARTIAL -->
-        <%- include("../partials/footer") %>
-    </body>
+      <!-- BUTTONS -->
+      <a href="/trefle/<%=back%>"
+        ><button id="nextPage">↚ PREVIOUS PAGE</button></a
+      >
+      <a href="/trefle/<%=next%>"><button id="nextPage">NEXT PAGE ↛</button></a>
+    </main>
+    <!-- THE FOOTER TAG PARTIAL -->
+    <%- include("../partials/footer") %>
+  </body>
 </html>

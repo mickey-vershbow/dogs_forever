@@ -171,6 +171,17 @@ body {
 .welcome-tile {
   font-size: 1.25rem;
 }
+
+#see-some-dogs {
+  margin: 0;
+  position: relative;
+  color: #111111;
+  background-color: #dddddd;
+}
+
+#see-some-dogs:hover {
+  box-shadow: 0 12px 16px 0 #111111, 0 17px 50px 0 #111111;
+}
 /* ----------- CAROUSEL STYLING --------------- */
 
 .slider {
