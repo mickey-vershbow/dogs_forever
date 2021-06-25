@@ -23,14 +23,15 @@ burgerIcon.addEventListener("click", () => {
 // Carousel Images Array
 
 const images = [
-  "https://bs.plantnet.org/image/o/019173a51a75465d4d29eb15c627cc262da57865",
-  "https://bs.plantnet.org/image/o/e386787ccfc1992cdd20c0c3b5cdfb60a7155b1e",
-  "https://d2seqvvyy3b8p2.cloudfront.net/a6c77e9053e16faac8a98aebb4b12a68.jpg",
-  "https://bs.plantnet.org/image/o/b9e1596b4b7c6b479ec3c9398c641bc50f4d5880",
-  "https://d2seqvvyy3b8p2.cloudfront.net/79b5638ac34f5dc4f16fa67a35ec296a.jpg",
-  "https://d2seqvvyy3b8p2.cloudfront.net/0bf43348fbf75f7b12ede84b1913c8a9.jpg",
-  "https://storage.googleapis.com/powop-assets/neotropikey/homalium_guianense2_dsasaki_fullsize.jpg",
-  "https://bs.plantnet.org/image/o/461f389919d8846b4060d896e404d4c06674aaf4",
+  "https://cdn2.thedogapi.com/images/xJJyuYXJS.jpg",
+  "https://cdn2.thedogapi.com/images/r1VV7pTV7.gif",
+  "https://cdn2.thedogapi.com/images/SkFt1gc47_1280.jpg",
+  "https://cdn2.thedogapi.com/images/qwqPTppkA.jpg",
+  "https://cdn2.thedogapi.com/images/PJvRHYfs1.jpg",
+  "https://cdn2.thedogapi.com/images/GZeDDro7-.jpg",
+  "https://cdn2.thedogapi.com/images/Sypubg54Q_1280.jpg",
+  "https://cdn2.thedogapi.com/images/IRrPFImEC.jpg",
+  "https://cdn2.thedogapi.com/images/6f5n_42mB.jpg",
 ];
 
 // Handler for forward button
