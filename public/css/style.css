@@ -275,6 +275,28 @@ body {
   cursor: crosshair;
 }
 
+/* previous and next page buttons */
+#previousPage,
+#nextPage {
+  /* margin: 10px 0px 40px 200px; */
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#previousPage {
+  margin-left: 62px;
+}
+
+#nextPage {
+  margin-right: 62px;
+}
+
+.page-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* ------------ USER PROFILE STYLING ----------- */
 
 .button.new-plant-button {

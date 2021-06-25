@@ -33,11 +33,10 @@
             <div class="main-text">
               <p class="title is-4"><%=dog.name%></p>
               <p class="subtitle is-6"><%=dog.temperament%></p>
-              <p><strong>Origin: </strong><%=dog.origin%></p>
+              <p><strong>Breed Group: </strong><%=dog.breed_group%></p>
               <p><strong>Height: </strong><%=dog.height.metric%></p>
               <p><strong>Weight: </strong><%=dog.weight.metric%></p>
               <p><strong>Bred For: </strong><%=dog.bred_for%></p>
-              <p><strong>Breed Group: </strong><%=dog.breed_group%></p>
               <p><strong>Life Span: </strong><%=dog.life_span%></p>
             </div>
             <div class="main-image">
@@ -54,11 +53,16 @@
       </div>
 
       <!-- BUTTONS -->
-      <a href="/trefle/<%=back%>"
-        ><button id="nextPage">↚ PREVIOUS PAGE</button></a
-      >
-      <a href="/trefle/<%=next%>"><button id="nextPage">NEXT PAGE ↛</button></a>
+      <div class="page-buttons">
+        <a href="/trefle/<%=back%>"
+          ><button class="button" id="previousPage">↚ PREVIOUS PAGE</button></a
+        >
+        <a href="/trefle/<%=next%>"
+          ><button class="button" id="nextPage">NEXT PAGE ↛</button></a
+        >
+      </div>
     </main>
+
     <!-- THE FOOTER TAG PARTIAL -->
     <%- include("../partials/footer") %>
   </body>
