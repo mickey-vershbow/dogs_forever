@@ -7,53 +7,27 @@
     <!-- THE HEADER TAG PARTIAL -->
     <%- include("partials/header") %>
 
-    <hr />
+<hr>
 
-    <!-- THE HEADER LINKS -->
+<!-- THE HEADER LINKS -->
 
-    <div class="header-links-container">
-      <div class="header-link">
-        <a href="/trefle/1">BROWSE</a>
-      </div>
+<div class="header-links-container">
+    <div class="header-link">
+      <a href="/trefle/1">BROWSE</a>
+    </div>
       <div class="header-link">
         <a href="/user/profile">COLLECT</a>
-      </div>
-      <div class="header-link">
-        <a href="/">SHOP</a>
-      </div>
     </div>
-    <hr />
-
-    <div class="tile is-ancestor">
-      <div class="tile is-parent">
-        <div class="tile is-child box">
-          <p class="title">Three</p>
-          <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad soluta consequuntur aperiam a? Delectus, deleniti ratione sunt nesciunt quibusdam eos distinctio dolor mollitia ullam pariatur laudantium velit nostrum veritatis facere!</p>
-        </div>
-      </div>
+    <div class="header-link">
+      <a href="/">SHOP</a>
     </div>
+    </div>
+<hr>
 
-    <main class="index-main">
-    <div class="container trefle-plants" id="plants-index" style="display: flex; flex-wrap: wrap; justify-content: space-around">
-      <% for (dog of dogs) { %>
-        <div class="card main-card" style="margin: 30px; max-width: 200px;">
-                <div class="media-content main-media">
-                  <div class="main-text">
-                  <p class="title is-4"><%=dog.name%></p>
-                  <p class="subtitle is-6"><%=dog.temperament%></p>
-                  </div>
-                  <div class="main-image">
-                      <a href="/trefle/index/<%=dog._id;%>"><img src="<%=dog.image.url%>"></a>
-                  </div>
-                  <div class="main-spacing">
+<main class="home-container">
 
-                  </div>
-                </div>
-
-    <!-- <main class="home-container"> -->
-
-    <!-- BULMA TILES -->
-    <!-- <div class="home-tiles">
+<!-- BULMA TILES -->
+<div class="home-tiles">
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
     <div class="tile">
@@ -68,10 +42,10 @@
             </ul></p><hr>
           <p class="subtitle">Canine data provided by  <a href="https://docs.thedogapi.com/">TheDogsApi.</p></a>
 </article>
-</div> -->
+</div>
 
-    <!------------ CAROUSEL ----------------->
-    <!-- <div class="tile is-parent">
+<!------------ CAROUSEL ----------------->
+      <div class="tile is-parent">
         <article class="tile is-child notification has-background-success-light carousel" id="image-carousel-mv">
 
            <div class="controls">
@@ -79,17 +53,18 @@
             </div>
 
             <div class="slider">
-             <img src="https://cdn2.thedogapi.com/images/rk5Eoe5Nm_1280.jpg" id="carousel-images">
+             <img src="https://cdn2.thedogapi.com/images/Bkam2l9Vm.jpg" id="carousel-images">
             </div>
 
             <div class="controls">
                   <button id="forward">⇾</button>
             </div>
 
-  </article> -->
-    <!-- </div></div> -->
+  </article>
+</div></div>
 
-    <!-- <div class="tile is-parent">
+
+    <div class="tile is-parent">
       <article class="tile is-child notification
         has-background-success-light">
         <p class="title">Once More For Dogs Shop</p>
@@ -99,9 +74,10 @@
         </div>
       </article>
     </div>
-  </div> -->
+  </div>
 
-    <!-- <div class="tile is-parent">
+
+  <div class="tile is-parent">
     <article class="tile is-child notification
         has-background-success-light">
       <div class="content">
@@ -121,11 +97,13 @@
       </div>
     </article>
   </div>
-</div> -->
-    <!-- </div>
-</main> -->
+</div>
+</div>
+</main>
 
-    <!-- THE FOOTER TAG PARTIAL -->
+
+
+   <!-- THE FOOTER TAG PARTIAL -->
     <%- include("partials/footer") %>
-  </body>
+ </body>
 </html>
