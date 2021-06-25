@@ -259,6 +259,11 @@ body {
   padding-bottom: 4px;
 }
 
+/* crosshair cursor over index cards */
+.media-content.main-media {
+  cursor: crosshair;
+}
+
 /* ------------ USER PROFILE STYLING ----------- */
 
 .button.new-plant-button {

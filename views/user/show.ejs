@@ -8,7 +8,7 @@
 
   <section class="hero is-header is-small has-text-centered">
       <div class="hero-body">
-        <p class="title is-large"><%= plant.name %></p>
+        <p class="title is-large"><%= dog.name %></p>
         <p class="subtitle">Scroll down to edit</p>
       </div>
     </section>
@@ -18,16 +18,16 @@
         <div class="plants-show">
             <div class="box">
             <strong>Name: </strong>
-            <%= plant.name %> <br><br>
+            <%= dog.name %> <br><br>
             <figure class="image is-128x128">
-              <img src="<%= plant.url %>" alt="plant_image">
+              <img src="<%= dog.image.url %>" alt="">
             </figure> <br><br>
-            <strong>Safe for pets and children?: </strong>
-            <%= plant.petsafe %> <br><br>
-            <strong>Plant Origin: </strong>
-            <%= plant.origin %> <br><br>
+            <strong>Hypoallergenic?: </strong>
+            <%= dog.hypoallergenic %> <br><br>
+            <strong>Origin: </strong>
+            <%= dog.origin %> <br><br>
             <strong>Description: </strong>
-            <%= plant.description %> <br><br>
+            <%= dog.wikipedia_url%> <br><br>
             </div>
             </div>
             <br>
@@ -117,7 +117,7 @@
 
 
 
-      
+
             <!-- <div class="box" id="logger-box">
               <ul>
                 <li> Entry created at <%= plant.createdAt %> </li>

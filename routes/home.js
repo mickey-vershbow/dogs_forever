@@ -129,7 +129,7 @@ router.get("/trefle/:pageNumber", async (req, res) => {
   let pageNumber = req.params.pageNumber;
   const API_KEY = process.env.API_KEY
   const response = await axios(
-    `https://api.thedogapi.com/v1/breeds?token=${API_KEY}&limit=10&page=${pageNumber}&order=asc`
+    `https://api.thedogapi.com/v1/breeds?token=${API_KEY}&limit=15&page=${pageNumber}&order=asc`
   );
   //   `https://api.thedogapi.com/v1/breeds?token=554fa029-68ae-4dc9-8334-11cf62a47d04&page=${pageNumber}`
   //   https://api.thedogapi.com/v1/images/search?token=554fa029-68ae-4dc9-8334-11cf62a47d04&limit=30
@@ -181,8 +181,8 @@ router.get("/user/new", isAuthorized, async (req, res) => {
 // DELETE route
 router.delete("/user/profile/:id", async (req, res) => {
   const id = req.params.id;
-  const index = req.user.plants.findIndex((plant) => `${plant._id}` === id);
-  req.user.plants.splice(index, 1);
+  const index = req.user.dogs.findIndex((dog) => `${dog._id}` === id);
+  req.user.dogs.splice(index, 1);
   req.user.save();
   res.redirect("/user/profile");
 });
@@ -190,12 +190,12 @@ router.delete("/user/profile/:id", async (req, res) => {
 // UPDATE put route
 router.put("/user/profile/:id", isAuthorized, async (req, res) => {
     const id = req.params.id;
-    const index = req.user.plants.findIndex((plant) => `${plant._id}` === id);
-    req.user.plants[index].url = req.body.url;
-    req.user.plants[index].name = req.body.name
-    req.user.plants[index].description = req.body.description;
-    req.user.plants[index].petsafe = req.body.petsafe;
-    req.user.plants[index].origin = req.body.origin;
+    const index = req.user.plants.findIndex((plant) => `${dog._id}` === id);
+    req.user.dogs[index].url = req.body.url;
+    req.user.dogs[index].name = req.body.name
+    req.user.dogs[index].description = req.body.description;
+    req.user.dogs[index].petsafe = req.body.petsafe;
+    req.user.dogs[index].origin = req.body.origin;
     req.user.save();
     res.redirect("/user/profile");
     //TODO: Add "notes", "preferred climate", "also known as" etc. properties to model
@@ -207,7 +207,7 @@ router.post("/user/new", isAuthorized, async (req, res) => {
   // fetch up to date user
   const user = await User.findOne({ username: req.user.username });
   // push a new plant and save
-  user.plants.push(req.body);
+  user.dogs.push(req.body);
   await user.save();
   // redirect back to user profile
   res.redirect("/user/profile");
@@ -217,12 +217,12 @@ router.post("/user/new", isAuthorized, async (req, res) => {
 
 // SHOW page get request
 router.get("/user/profile/:id", isAuthorized, async (req, res) => {
-    const plant = await req.user.plants.find((plant) => {
-        return req.params.id === `${plant._id}`
+    const plant = await req.user.dogs.find((plant) => {
+        return req.params.id === `${dog._id}`
     })
   res.render("user/show.ejs",
     {
-        plant,
+        dog,
         isLoggedIn: req.session.userId
     }
   )
