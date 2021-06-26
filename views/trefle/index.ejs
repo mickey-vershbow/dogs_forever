@@ -38,11 +38,15 @@
                 <a href="<%=dog.image.url%>"><img src="<%=dog.image.url%>" /></a>
               </div>
                <div class="main-text">
+                 <% if (dog.breed_group) { %>
                  <p><strong>Breed Group: </strong><%=dog.breed_group%></p>
+                 <% } %>
                  <p><strong>Height: </strong><%=dog.height.metric%></p>
                  <p><strong>Weight: </strong><%=dog.weight.metric%></p>
                  <p><strong>Bred For: </strong><%=dog.bred_for%></p>
+                 <% if (dog.life_span) { %>
                  <p><strong>Life Span: </strong><%=dog.life_span%></p>
+                 <% } %>
                </div>
             </div>
             <div class="main-spacing"></div>

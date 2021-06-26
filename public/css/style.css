@@ -357,6 +357,12 @@ a #see-some-dogs {
   height: 50vh;
 }
 
+/* ------ SHOW STYLING --------  */
+
+#edit-form {
+  margin: 15px;
+}
+
 /* ------------ FOOTER PAGE STYLING ----------- */
 
 .footer {

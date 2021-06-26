@@ -31,15 +31,19 @@
             <div class="main-image" id="main-image-show">
               <a href="<%=dog.image.url%>"><img src="<%=dog.image.url%>" /></a>
             </div>
+            <% if (dog.breed_group) { %>
             <p><strong>Breed Group: </strong><%=dog.breed_group%></p>
+            <% } %>
             <p><strong>Bred For: </strong><%=dog.bred_for%></p>
+            <% if (dog.life_span) { %>
             <p><strong>Life Span: </strong><%=dog.life_span%></p>
+            <% } %>
             <div class="main-spacing"></div>
-          </div>
+          </div><hr>
 
 
               <!-- BACK TO PROFILE LINK -->
-              <a href="/user/profile"><button class="button is-normal is-fullwidth is-outlined is-success" id="create-button">Back to Profile</button></a><br>
+              <a href="/user/profile"><button class="button is-normal is-fullwidth is-outlined is-success" id="create-button">Back to Profile</button></a><hr>
 
       </body>
     </html>
@@ -51,38 +55,37 @@
         <p class="title is-small">Edit "<%= dog.name %>"</p>
       </div>
     </section>
-        <br>
 
 <main>
-
 <!-- EDIT FORM -->
-
-  <form action="/user/profile/<%= dog._id %>?_method=PUT" method="POST">
+  <form action="/user/profile/<%= dog._id %>?_method=PUT" method="POST" id="edit-form">
 
     <!---------- NAME ------------>
-                <div class="box" id="edit-form">
-                <div class="field">
+
+                  <div class="field">
                   <label class="label">Name</label>
                   <div class="control">
                     <input class="input" type="text" name="name" value="<%=dog.name%>" placeholder="<%=dog.name%>"><br/>
                   </div>
                 </div>
 
+
 <!---------- TEMPERAMENT ------------>
-                <div class="box" id="edit-form">
+
                 <div class="field">
                   <label class="label">Temperament</label>
                   <div class="control">
-                    <input class="input" type="text" name="url" value="<%=dog.temperament%>" placeholder="<%=dog.temperament%>"><br/>
+                    <input class="input" type="text" name="temperament" value="<%=dog.temperament%>" placeholder="<%=dog.temperament%>"><br/>
                   </div>
                 </div>
+
 
 <!---------- ImageURL ------------>
 
                 <div class="field">
-                  <label class="label"></label>
+                  <label class="label">Image URL</label>
                   <div class="control">
-                    <input class="input" type="text" name="petsafe" value="<%=dog.image.url%>" placeholder="<%=dog.image.url%>"><br/>
+                    <input class="input" type="text" name="image.url" value="<%=dog.image.url%>" placeholder="<%=dog.image.url%>"><br/>
                   </div>
                 </div>
 
@@ -91,7 +94,7 @@
                 <div class="field">
                   <label class="label">Breed Group</label>
                   <div class="control">
-                    <input class="input" type="text" name="origin" value="<%=dog.breed_group%>" placeholder="<%=dog.breed_group%>"><br/>
+                    <input class="input" type="text" name="breed_group" value="<%=dog.breed_group%>" placeholder="<%=dog.breed_group%>"><br/>
                   </div>
                 </div>
 
@@ -99,9 +102,17 @@
                 <div class="field">
                   <label class="label">Bred For</label>
                   <div class="control">
-                    <input class="text" type="text" name="description" value="<%=dog.bred_for%>" placeholder="<%=dog.bred_for%>"></>
+                    <input class="text" type="text" name="bred_for" value="<%=dog.bred_for%>" placeholder="<%=dog.bred_for%>"></>
                   </div>
                 </div>
+
+    <!---------- LIFE SPAN ------------>
+                    <div class="field">
+                      <label class="label">Life Span</label>
+                      <div class="control">
+                        <input class="text" type="text" name="life_span" value="<%=dog.life_span%>" placeholder="<%=dog.life_span%>"></>
+                      </div>
+                    </div>
 
 
 <!---------- SUBMIT ------------>
@@ -113,7 +124,7 @@
                     <button class="button is-link is-light">Cancel</button>
                   </div>
                 </div>
-                </div>
+              </div>
 
           </main>
           <br>
