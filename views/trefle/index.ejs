@@ -28,22 +28,24 @@
         style="display: flex; flex-wrap: wrap; justify-content: space-around"
       >
         <% for (dog of dogs) { %>
-        <div class="card main-card" style="margin: 30px; max-width: 200px">
+        <div class="card main-card" style="margin: 30px; max-width: 400px">
           <div class="media-content main-media">
             <div class="main-text">
               <p class="title is-4"><%=dog.name%></p>
               <p class="subtitle is-6"><%=dog.temperament%></p>
-              <p><strong>Breed Group: </strong><%=dog.breed_group%></p>
-              <p><strong>Height: </strong><%=dog.height.metric%></p>
-              <p><strong>Weight: </strong><%=dog.weight.metric%></p>
-              <p><strong>Bred For: </strong><%=dog.bred_for%></p>
-              <p><strong>Life Span: </strong><%=dog.life_span%></p>
-            </div>
-            <div class="main-image">
-              <a href="<%=dog.image.url%>"><img src="<%=dog.image.url%>" /></a>
+              </div>
+              <div class="main-image">
+                <a href="<%=dog.image.url%>"><img src="<%=dog.image.url%>" /></a>
+              </div>
+               <div class="main-text">
+                 <p><strong>Breed Group: </strong><%=dog.breed_group%></p>
+                 <p><strong>Height: </strong><%=dog.height.metric%></p>
+                 <p><strong>Weight: </strong><%=dog.weight.metric%></p>
+                 <p><strong>Bred For: </strong><%=dog.bred_for%></p>
+                 <p><strong>Life Span: </strong><%=dog.life_span%></p>
+               </div>
             </div>
             <div class="main-spacing"></div>
-          </div>
 
           <!-- <div class="content about-button">
                     <a href="<%=dog.link%>"  target="_blank"><button class="button about-button">ABOUT</button></a>

@@ -252,6 +252,10 @@ a #see-some-dogs {
   min-height: 150px;
 }
 
+.main-image {
+  margin-top: 14px;
+}
+
 #main-image-show {
   max-height: 100%;
   margin: 0 auto;
