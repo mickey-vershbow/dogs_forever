@@ -8,11 +8,9 @@ const Dog = new Schema({
   breed_group: String,
   bred_for: String,
   life_span: String,
-  origin: String,
   weight: {},
-  country_code: String,
+  reference_image_id: String,
   height: {},
-  hypoallergenic: Number,
   image: {
     id: String,
     width: String,

@@ -65,7 +65,7 @@ body {
 }
 
 #enter-site:hover {
-  box-shadow: 0 12px 16px 0 #111111, 0 17px 50px 0 #111111;
+  box-shadow: 0 12px 16px 0 #ffdc00, 0 17px 50px 0 #ffdc00;
 }
 
 /* ----------- HEADER and NAVBAR STYLING ----------- */
@@ -168,20 +168,18 @@ body {
   list-style: square;
 }
 
-.welcome-tile {
-  font-size: 1.25rem;
-}
-
-#see-some-dogs {
+a #see-some-dogs {
   margin: 0;
   position: relative;
   color: #111111;
   background-color: #dddddd;
+  text-decoration: none;
 }
 
 #see-some-dogs:hover {
-  box-shadow: 0 12px 16px 0 #111111, 0 17px 50px 0 #111111;
+  box-shadow: 0 12px 16px 0 #ffdc00, 0 17px 50px 0 #ffdc00;
 }
+
 /* ----------- CAROUSEL STYLING --------------- */
 
 .slider {
@@ -254,6 +252,11 @@ body {
   min-height: 150px;
 }
 
+#main-image-show {
+  max-height: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
 .main-card.main-spacing {
   min-height: 10%;
 }
@@ -332,6 +335,13 @@ body {
 .plant-name {
   font-size: xx-large;
   color: #111111;
+}
+
+.delete-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+  margin-top: 10px;
 }
 
 /* ------ USER AUTH STYLING --------  */

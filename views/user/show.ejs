@@ -15,37 +15,39 @@
         <br>
 
 <main>
-        <div class="plants-show">
-            <div class="box">
-            <strong>Name: </strong>
-            <%= dog.name %> <br><br>
-            <figure class="image is-128x128">
-              <img src="<%= dog.image.url %>" alt="">
-            </figure> <br><br>
-            <strong>Hypoallergenic?: </strong>
-            <%= dog.hypoallergenic %> <br><br>
-            <strong>Origin: </strong>
-            <%= dog.origin %> <br><br>
-            <strong>Description: </strong>
-            <%= dog.wikipedia_url%> <br><br>
-            </div>
-            </div>
-            <br>
 
-            <!-- <div class="field is-grouped" id="index-buttons"> -->
+ <div
+        class="plants-show"
+
+        style="display: flex; flex-wrap: wrap; justify-content: space-around"
+      >
+        <div class="card main-card" style="margin: 30px;">
+          <div class="media-content main-media">
+            <div class="main-text">
+              <p class="title is-4"><%=dog.name%></p>
+              <p class="subtitle is-6"><strong>Temperament: </strong> <%=dog.temperament%></p>
+            </div>
+            <div class="main-image" id="main-image-show">
+              <a href="<%=dog.image.url%>"><img src="<%=dog.image.url%>" /></a>
+            </div>
+            <p><strong>Breed Group: </strong><%=dog.breed_group%></p>
+            <p><strong>Bred For: </strong><%=dog.bred_for%></p>
+            <p><strong>Life Span: </strong><%=dog.life_span%></p>
+            <div class="main-spacing"></div>
+          </div>
+
 
               <!-- BACK TO PROFILE LINK -->
-              <a href="/user/profile"><button class="button is-normal is-fullwidth is-outlined" id="create-button">Back to Profile</button></a><br>
-
+              <a href="/user/profile"><button class="button is-normal is-fullwidth is-outlined is-success" id="create-button">Back to Profile</button></a><br>
 
       </body>
     </html>
 </form>
 
 
-<section class="hero is-primary is-small has-text-centered">
+<section class="hero is-warning is-small has-text-centered">
       <div class="hero-body">
-        <p class="title is-small">Edit "<%= plant.name %>"</p>
+        <p class="title is-small">Edit "<%= dog.name %>"</p>
       </div>
     </section>
         <br>
@@ -54,49 +56,49 @@
 
 <!-- EDIT FORM -->
 
-  <form action="/user/profile/<%= plant._id %>?_method=PUT" method="POST">
+  <form action="/user/profile/<%= dog._id %>?_method=PUT" method="POST">
 
     <!---------- NAME ------------>
                 <div class="box" id="edit-form">
                 <div class="field">
                   <label class="label">Name</label>
                   <div class="control">
-                    <input class="input" type="text" name="name" value="<%=plant.name%>" placeholder="<%=plant.name%>"><br/>
+                    <input class="input" type="text" name="name" value="<%=dog.name%>" placeholder="<%=dog.name%>"><br/>
                   </div>
                 </div>
 
-<!---------- IMAGE ------------>
+<!---------- TEMPERAMENT ------------>
                 <div class="box" id="edit-form">
                 <div class="field">
-                  <label class="label">Image URL</label>
+                  <label class="label">Temperament</label>
                   <div class="control">
-                    <input class="input" type="text" name="url" value="<%=plant.url%>" placeholder="<%=plant.url%>"><br/>
+                    <input class="input" type="text" name="url" value="<%=dog.temperament%>" placeholder="<%=dog.temperament%>"><br/>
                   </div>
                 </div>
 
-<!---------- PETSAFE ------------>
+<!---------- ImageURL ------------>
 
                 <div class="field">
-                  <label class="label">Safe for pets and children?</label>
+                  <label class="label"></label>
                   <div class="control">
-                    <input class="input" type="text" name="petsafe" value="<%=plant.petsafe%>" placeholder="<%=plant.petsafe%>"><br/>
+                    <input class="input" type="text" name="petsafe" value="<%=dog.image.url%>" placeholder="<%=dog.image.url%>"><br/>
                   </div>
                 </div>
 
-<!---------- ORIGIN ------------>
+<!---------- BREED GROUP ------------>
 
                 <div class="field">
-                  <label class="label">Plant Origin</label>
+                  <label class="label">Breed Group</label>
                   <div class="control">
-                    <input class="input" type="text" name="origin" value="<%=plant.origin%>" placeholder="<%=plant.origin%>"><br/>
+                    <input class="input" type="text" name="origin" value="<%=dog.breed_group%>" placeholder="<%=dog.breed_group%>"><br/>
                   </div>
                 </div>
 
-<!---------- DESCRIPTION ------------>
+<!---------- BRED FOR ------------>
                 <div class="field">
-                  <label class="label">Description</label>
+                  <label class="label">Bred For</label>
                   <div class="control">
-                    <textarea class="textarea" type="text" name="description" value="<%=plant.description%>" placeholder="<%=plant.description%>"></textarea>
+                    <input class="text" type="text" name="description" value="<%=dog.bred_for%>" placeholder="<%=dog.bred_for%>"></>
                   </div>
                 </div>
 
@@ -112,18 +114,6 @@
                 </div>
                 </div>
 
-
-
-
-
-
-
-            <!-- <div class="box" id="logger-box">
-              <ul>
-                <li> Entry created at <%= plant.createdAt %> </li>
-                <li> Entry updated at <%= plant.updatedAt %> </li>
-              </ul>
-            </div> -->
           </main>
           <br>
 

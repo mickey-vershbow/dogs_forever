@@ -12,41 +12,56 @@
       <div class="hero-body">
         <p class="title">Your Favorites</p>
         <p class="subtitle">
-          <!-- Add new plant button -->
-          <a class="button new-plant-button" href="/user/new">Add A New Dog Breed</a>
+          <!-- Add new dog button -->
+          <a class="button new-plant-button" href="/user/new"
+            >Add A New Dog Breed</a
+          >
         </p>
       </div>
     </section>
 
-    <main class="profile-container">
-      <div class="container is-fluid profile-plants">
+    <main>
+      <div
+        style="display: flex; flex-wrap: wrap; justify-content: space-around"
+      >
         <% for(let i = 0; i < dogs.length; i++) { %>
-          <br>
+        <div class="card main-card" style="margin: 30px; max-width: 300px">
+          <div class="media-content main-media">
+            <div class="main-text">
+              <!-- SHOW PAGE -->
+              <a href="/user/profile/<%=dogs[i]._id;%>">
+                <p class="title is-4"><%= dogs[i].name %></p>
+              </a>
+            </div>
+            <div class="main-image">
+              <a href="<%=dogs[i].image.url%>"
+                ><img src="<%=dogs[i].image.url%>"
+              /></a>
+              <!-- <img src="<%= dogs[i].image.url %>" /> -->
+            </div>
+            <div class="main-spacing"></div>
+            <!-- DELETE FORM -->
+            <form
+              action="/user/profile/<%=dogs[i]._id; %>?_method=DELETE"
+              method="POST"
+              class="delete-button"
+            >
+              <input
+                type="submit"
+                value="Delete Dog Breed"
+                class="button is-small is-danger is-outlined"
+              />
+            </form>
+          </div>
+        </div>
+        <% } %>
+      </div>
 
-      <figure class="image is-128x128 profile-plants-links">
-        <!-- SHOW PAGE -->
-        <a href="/user/profile/<%=dogs[i]._id;%>">
-          <h1 class="plant-name has-text-centered"><%= dogs[i].name %></h1>
-          <img src="<%= dogs[i].url %>" />
-      </a>
-       <!-- DELETE FORM -->
-              <form action="/user/profile/<%=dogs[i]._id; %>?_method=DELETE" method="POST" class="delete-button">
-                <input type="submit" value="Delete Plant" class="button is-small is-danger is-outlined"/>
-              </form>
-    <% } %>
-      </figure>
-      <br><br><br><br>
-    </div>
-
-
-    <!-- Log out button -->
-    <!-- <a class="button logout-button" href="/user/logout">Log Out</a> -->
-
+      <!-- Log out button -->
+      <!-- <a class="button logout-button" href="/user/logout">Log Out</a> -->
     </main>
 
     <!-- THE FOOTER PARTIAL -->
     <%- include("../partials/footer") %>
-
-
   </body>
 </html>

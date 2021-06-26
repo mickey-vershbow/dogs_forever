@@ -217,7 +217,7 @@ router.post("/user/new", isAuthorized, async (req, res) => {
 
 // SHOW page get request
 router.get("/user/profile/:id", isAuthorized, async (req, res) => {
-    const plant = await req.user.dogs.find((plant) => {
+    const dog = await req.user.dogs.find((dog) => {
         return req.params.id === `${dog._id}`
     })
   res.render("user/show.ejs",
