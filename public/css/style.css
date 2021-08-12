@@ -15,13 +15,13 @@ body {
 /* TODO: Mobile / responsible styling */
 
 #bg {
-  background-image: url("../images/dogs_bg1.jpeg");
+  background-image: url("../images/dogs_bg1\ _cropped.jpeg");
   width: 100%;
   height: 100vh;
   background-size: cover;
-  /* background-position: center top; */
+  background-position: center right;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-color: #464646;
 }
 

@@ -21,6 +21,8 @@ A simple, fun app for learning abotu different dog breeds.
 
 - make sure to replace MONGODB_URL with a working Mongo URL
 
+- run 'npm start' to start the dev server
+
 - enjoy!
 
 
