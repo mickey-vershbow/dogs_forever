@@ -1,3 +1,5 @@
+*, *::before, *::after { box-sizing: border-box; }
+
 /* ----------- ALL PAGES STYLING --------------- */
 
 * {
@@ -34,6 +36,9 @@ body {
   display: block;
   text-align: center;
   color: #ffffff;
+  background: rgba(60, 60, 60, 0.5);
+  border-radius: 100px;
+  margin-bottom: 10px;
 }
 body {
   position: relative;
