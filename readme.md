@@ -2,12 +2,6 @@
 
 A simple, fun app for learning abotu different dog breeds.
 
-# Screenshots
-
-![Landing Page](/public/images/landing.png)
-![Home Page](/public/images/home.png)
-![Profile Page](/public/images/profile.png)
-![Index Page](/public/images/index.png)
 
 # Getting Started
 
@@ -34,10 +28,8 @@ A simple, fun app for learning abotu different dog breeds.
  - HTML / CSS / Javascript / jQuery
  - Express / EJS / Node.js / MongoDB / Mongoose
  - Styling: Bulma / Google Fonts / ["Colors"](http://clrs.cc/) by [@murmurs](https://github.com/mrmrs)
+ - API: ["The Dog API"](https://www.thedogapi.com/)
 
-
-
-# My Experience
 
 ## Challenges
 
@@ -56,7 +48,6 @@ A simple, fun app for learning abotu different dog breeds.
 
 ## The IceBox
 
-- Refactor the app as "Native Plants"
-- Go further with 3rd party API data. Create show pages for all the plants in the index; access more data properties and display them; give users the option to "save" plants from the index to their own collection; create the ability to filter data based on location and/or other conditions.
-- Give users the abiilty to add more than one image per plant entry.
-- Rethink the "store" concept, does that still work with Native Plants or should it be something else entirely?
+- Go further with 3rd party API data. Create show pages for all the dogs in the index; access more data properties and display them; give users the option to "save" dogs  from the index to their own collection; create the ability to filter data based on location and/or other conditions.
+- Give users the abiilty to add more than one image per dog entry.
+
